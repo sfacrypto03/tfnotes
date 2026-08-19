@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TF Notes — Partner Resmi Traders Family</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--g9:#0a3d2b;--g8:#0f5c3c;--g7:#147a50;--g6:#1a9965;--g5:#22c55e;--g4:#4ade80;--g3:#86efac;--g2:#bbf7d0;--g1:#dcfce7;--g0:#f0fdf4;--ink:#0f172a;--ink2:#334155;--ink3:#64748b;--ink4:#94a3b8;--ink5:#cbd5e1;--ink6:#e2e8f0;--bg:#fff;--bg2:#f8fafb}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.6}
+h1,h2,h3,h4,h5{font-family:'Plus Jakarta Sans',sans-serif;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.ctn{max-width:1100px;margin:0 auto;padding:0 24px}
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--ink6);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 1px 8px rgba(0,0,0,0.06)}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo .wd{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.05rem;color:var(--ink)}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:0.85rem;font-weight:500;color:var(--ink2);transition:color .2s}
+.nav-links a:hover{color:var(--g7)}
+.nav-cta{background:var(--g8);color:#fff!important;padding:9px 20px;border-radius:8px;font-weight:600!important;font-size:0.85rem}
+.nav-cta:hover{background:var(--g7)}
+.ham{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.ham span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px;transition:.3s}
+/* HERO */
+.hero{padding:140px 24px 70px;text-align:center;background:linear-gradient(180deg,var(--g0) 0%,var(--bg) 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(34,197,94,0.08) 0%,transparent 70%);pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--g1);border:1px solid var(--g2);color:var(--g8);font-size:0.75rem;font-weight:600;padding:5px 14px;border-radius:100px;margin-bottom:20px}
+.badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--g5)}
+.hero h1{font-size:2.8rem;font-weight:800;letter-spacing:-0.03em;max-width:720px;margin:0 auto 16px}
+.hero h1 .gr{color:var(--g7)}
+.hero>p,.hero .sub{font-size:1.05rem;color:var(--ink3);max-width:560px;margin:0 auto 28px;line-height:1.7}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-p{background:var(--g8);color:#fff;padding:12px 28px;border-radius:10px;font-weight:600;font-size:0.92rem;border:none;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:6px}
+.btn-p:hover{background:var(--g7);box-shadow:0 4px 20px rgba(15,92,60,0.25);transform:translateY(-1px)}
+.btn-o{background:transparent;color:var(--g8);padding:12px 28px;border-radius:10px;font-weight:600;font-size:0.92rem;border:1.5px solid var(--g2);cursor:pointer;transition:all .25s}
+.btn-o:hover{background:var(--g0);border-color:var(--g4)}
+/* STATS */
+.stats{background:var(--bg2);border-top:1px solid var(--ink6);border-bottom:1px solid var(--ink6);padding:48px 24px}
+.stats-g{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+.stat h3{font-size:2rem;font-weight:800;color:var(--g8)}
+.stat p{font-size:0.82rem;color:var(--ink3);margin-top:4px}
+/* SECTIONS */
+section{padding:80px 24px}
+.lbl{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--g6);margin-bottom:8px}
+.sec-t{font-size:2rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px}
+.sec-d{font-size:1rem;color:var(--ink3);max-width:560px;line-height:1.7;margin-bottom:40px}
+/* ABOUT */
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-t p{font-size:0.95rem;color:var(--ink2);line-height:1.75;margin-bottom:14px}
+.about-img{border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08)}
+/* 3 ROLE */
+.role-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.role{background:var(--bg);border:1px solid var(--ink6);border-radius:14px;padding:28px 24px;transition:all .3s}
+.role:hover{border-color:var(--g3);box-shadow:0 4px 24px rgba(15,92,60,0.08);transform:translateY(-3px)}
+.role-i{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:14px}
+.role h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+.role p{font-size:0.85rem;color:var(--ink3);line-height:1.6}
+.role ul{margin-top:10px;padding-left:16px}
+.role li{font-size:0.82rem;color:var(--ink3);line-height:1.6;margin-bottom:4px}
+/* ANALIS INCOME */
+.analis-g{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:32px}
+.an{background:var(--g0);border:1px solid var(--g2);border-radius:14px;padding:20px 16px;text-align:center}
+.an .range{font-size:0.72rem;color:var(--ink3);margin-bottom:4px}
+.an .num{font-size:1.4rem;font-weight:800;color:var(--g8)}
+.an .cnt{font-size:0.72rem;color:var(--ink3);margin-top:2px}
+/* SCORING */
+.score-table{width:100%;border-collapse:collapse;background:var(--bg);border:1px solid var(--ink6);border-radius:14px;overflow:hidden;margin-bottom:32px}
+.score-table th{background:var(--g0);padding:12px 16px;text-align:left;font-size:0.78rem;font-weight:600;color:var(--g8);text-transform:uppercase;letter-spacing:0.05em;border-bottom:1px solid var(--g2)}
+.score-table td{padding:10px 16px;font-size:0.85rem;border-bottom:1px solid var(--ink6)}
+.score-table tr:last-child td{border-bottom:none}
+/* SERVICES */
+.svc-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:var(--bg);border:1px solid var(--ink6);border-radius:14px;padding:28px 24px;transition:all .3s}
+.svc:hover{border-color:var(--g3);box-shadow:0 4px 24px rgba(15,92,60,0.08);transform:translateY(-3px)}
+.svc-i{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:14px}
+.svc h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+.svc p{font-size:0.85rem;color:var(--ink3);line-height:1.6}
+/* TF APP */
+.app-g{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.app-features{list-style:none;display:flex;flex-direction:column;gap:10px}
+.app-features li{display:flex;align-items:flex-start;gap:10px;font-size:0.9rem;color:var(--ink2)}
+.app-features li::before{content:'✓';color:var(--g5);font-weight:700;flex-shrink:0}
+/* STEPS */
+.step-g{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+.step-n{font-size:3rem;font-weight:800;color:var(--g2);line-height:1;margin-bottom:12px}
+.step h3{font-size:1.05rem;font-weight:700;margin-bottom:6px}
+.step p{font-size:0.85rem;color:var(--ink3);line-height:1.6}
+/* PANDUAN */
+.panduan-steps{counter-reset:ps}
+.p-step{display:flex;gap:20px;margin-bottom:20px;align-items:flex-start}
+.p-step::before{counter-increment:ps;content:counter(ps);width:36px;height:36px;border-radius:50%;background:var(--g8);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.88rem;flex-shrink:0}
+.p-step div{flex:1}
+.p-step h4{font-size:1rem;font-weight:700;margin-bottom:4px}
+.p-step p{font-size:0.88rem;color:var(--ink3);line-height:1.6}
+/* FAQ */
+.faq-l{max-width:720px}
+.faq-i{border-bottom:1px solid var(--ink6)}
+.faq-q{width:100%;background:none;border:none;padding:18px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:0.95rem;font-weight:600;color:var(--ink);font-family:inherit;text-align:left}
+.faq-q .ar{color:var(--ink4);font-size:1.1rem;transition:transform .3s;flex-shrink:0;margin-left:12px}
+.faq-i.op .faq-q .ar{transform:rotate(45deg);color:var(--g6)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-i.op .faq-a{max-height:200px}
+.faq-a p{padding-bottom:18px;font-size:0.88rem;color:var(--ink3);line-height:1.7}
+/* CTA */
+.cta{background:var(--g9);padding:80px 24px;text-align:center}
+.cta .sec-t{color:#fff}
+.cta .sec-d{color:rgba(255,255,255,0.6);margin-left:auto;margin-right:auto}
+.btn-w{background:#fff;color:var(--g9);padding:12px 28px;border-radius:10px;font-weight:600;font-size:0.92rem;border:none;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:6px}
+.btn-w:hover{box-shadow:0 4px 20px rgba(0,0,0,0.2);transform:translateY(-1px)}
+.btn-g{background:transparent;color:#fff;padding:12px 28px;border-radius:10px;font-weight:600;font-size:0.92rem;border:1.5px solid rgba(255,255,255,0.2);cursor:pointer;transition:all .25s}
+.btn-g:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.4)}
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--ink6);padding:40px 24px}
+.ft-in{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.ft-in p{font-size:0.78rem;color:var(--ink4)}
+.ft-links{display:flex;gap:20px}
+.ft-links a{font-size:0.78rem;color:var(--ink4);transition:color .2s}
+.ft-links a:hover{color:var(--ink2)}
+.discl{max-width:1000px;margin:16px auto 0;padding:16px;border-top:1px solid var(--ink6);font-size:0.7rem;color:var(--ink4);line-height:1.6}
+/* POPUP */
+.popup-ban{position:fixed;bottom:0;left:0;right:0;z-index:200;background:linear-gradient(135deg,#0a3d2b,#0f5c3c);padding:14px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 -2px 20px rgba(0,0,0,0.2);transform:translateY(100%);transition:transform .4s ease}
+.popup-ban.show{transform:translateY(0)}
+.popup-x{background:none;border:none;color:rgba(255,255,255,0.6);font-size:18px;cursor:pointer;padding:4px;line-height:1;flex-shrink:0}
+.popup-x:hover{color:#fff}
+.popup-icon{flex-shrink:0}
+.popup-txt{flex:1;color:#fff;font-size:0.85rem;font-weight:500}
+.popup-dl{background:var(--g5);color:#fff;border:none;padding:10px 20px;border-radius:8px;font-weight:600;font-size:0.85rem;cursor:pointer;flex-shrink:0;transition:background .2s}
+.popup-dl:hover{background:var(--g4)}
+.popup-ban.hidden{display:none}
+/* DIVIDER */
+.divider{width:100%;height:1px;background:var(--ink6);margin:0}
+/* RESPONSIVE */
+@media(max-width:900px){
+.nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 24px;border-bottom:1px solid var(--ink6);gap:16px}
+.nav-links.open{display:flex}
+.ham{display:block}
+.hero h1{font-size:2rem}
+.stats-g{grid-template-columns:repeat(2,1fr)}
+.about-g,.app-g{grid-template-columns:1fr}
+.role-g,.svc-g,.step-g{grid-template-columns:1fr}
+.analis-g{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:480px){
+.hero{padding:120px 16px 60px}
+.hero h1{font-size:1.7rem}
+section{padding:60px 16px}
+.sec-t{font-size:1.5rem}
+.analis-g{grid-template-columns:repeat(2,1fr)}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav class="nav" id="nav">
+<div class="nav-in">
+<a href="#" class="nav-logo"><img src="img/tfnotes-logo.jpg" alt="TF Notes" height="80" style="object-fit:contain;max-width:none"></a>
+<div class="nav-links" id="navL">
+<a href="#tentang">Tentang Traders Family</a>
+<a href="#role">3 Role</a>
+<a href="#analis">Analis</a>
+<a href="#tfapp">TF App</a>
+<a href="#panduan">Panduan</a>
+<a href="#layanan">Layanan</a>
+<a href="#faq">FAQ</a>
+<a href="https://account.tradersfamily.id/aff/412374/" target="_blank" class="nav-cta">Daftar</a>
+</div>
+<button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="badge">Partner Resmi Traders Family</div>
+<h1>Eksklusif Trading Forex<br>Bersama <span class="gr">Traders Family</span></h1>
+<p>Traders Family adalah perusahaan konsultan forex terbesar di Indonesia yang telah membantu ribuan trader mencapai profit konsisten. Kami hadir sebagai partner resmi untuk menghubungkan Anda dengan seluruh ekosistem TF.</p>
+<div class="btns">
+<a href="https://account.tradersfamily.id/aff/412374/" target="_blank" class="btn-p">Daftar Gratis Sekarang →</a>
+<a href="#tentang" class="btn-o">Pelajari Lebih Lanjut</a>
+</div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+<div class="stats-g">
+<div class="stat"><h3>500rb+</h3><p>Downloads Aplikasi</p></div>
+<div class="stat"><h3>20.000+</h3><p>Total Analis Aktif</p></div>
+<div class="stat"><h3>4 Kantor</h3><p>Jakarta, SBY, Jogja, Tangerang</p></div>
+</div>
+</div>
+
+<!-- TENTANG -->
+<section id="tentang">
+<div class="ctn">
+<div class="about-g">
+<div class="about-t">
+<div class="lbl">Tentang Traders Family</div>
+<h2 class="sec-t">Konsultan Forex<br>Terpercaya di Indonesia</h2>
+<p>Traders Family adalah perusahaan konsultan forex berbadan hukum yang berlisensi BAPPEBTI sebagai Penasihat Berjangka. Kami tidak menampung dana klien — fokus kami adalah edukasi, bimbingan, dan perlindungan trader.</p>
+<p>Didirikan oleh <strong>Tito Hayunanda (Johnpaul77)</strong>, TF telah menjadi ekosistem trading terlengkap di Indonesia yang mengintegrasikan edukasi, marketplace sinyal, trading tools, dan perlindungan dana.</p>
+<div class="btns" style="justify-content:flex-start">
+<a href="https://account.tradersfamily.id/aff/412374/" target="_blank" class="btn-p">Gabung Sekarang →</a>
+</div>
+</div>
+<div class="about-img">
+<img src="img/event-mata-trader.jpg" alt="Traders Family Event" loading="lazy">
+</div>
+</div>
+</div>
+</section>
+
+<!-- 3 ROLE -->
+<section id="role" style="background:var(--bg2)">
+<div class="ctn">
+<div class="lbl">3 Role Member</div>
+<h2 class="sec-t">Pilih Peran Anda di Traders Family</h2>
+<p class="sec-d">Setiap member bisa memilih peran sesuai tujuan dan gaya trading masing-masing.</p>
+<div class="role-g">
+<div class="role">
+<div class="role-i" style="background:#dbeafe">📈</div>
+<h3>Investor</h3>
+<p>Member yang menginvestasikan waktu dan dedikasinya untuk belajar trading secara mandiri. Tujuannya menjadi trader independen yang mampu mengeksekusi seluruh aktivitas di market dengan kemampuan sendiri.</p>
+<ul>
+<li>Exclusive Content (edukasi lengkap)</li>
+<li>Backtest Tool & RR Calculator</li>
+<li>Daily Outlook & Monthly Seasonality</li>
+<li>Investment Calculator</li>
+</ul>
+
+</div>
+<div class="role">
+<div class="role-i" style="background:var(--g1)">🎯</div>
+<h3>Subscriber</h3>
+<p>Ikuti signal dari analis profesional tanpa perlu analisis sendiri.</p>
+<ul>
+<li>Copy Signal otomatis ke MT4</li>
+<li>Notifikasi signal real-time</li>
+<li>Lihat portofolio & scoring analis</li>
+<li>Bebas pilih channel sendiri</li>
+</ul>
+</div>
+<div class="role">
+<div class="role-i" style="background:#ffedd5">💰</div>
+<h3>Analis</h3>
+<p>Buat signal, bangun portofolio, dan hasilkan income tanpa modal.</p>
+<ul>
+<li>Trading tanpa modal (Belajar Tapi Dibayar)</li>
+<li>TF Point → cash ke rekening</li>
+<li>6 level: Newbie → Legend</li>
+<li>Potensi income hingga 100jt+/bulan</li>
+</ul>
+</div>
+</div>
+<div class="btns">
+<a href="https://account.tradersfamily.id/aff/412374/" target="_blank" class="btn-p">Daftar & Pilih Peran →</a>
+</div>
+</div>
+</section>
+
+<!-- ANALIS -->
+<section id="analis">
+<div class="ctn">
+<div class="lbl">Jadi Analis</div>
+<h2 class="sec-t">20.000+ Analis, Income ≤5jt — 100jt+/Bulan</h2>
+<p class="sec-d">Total analis di Traders Family mencapai 20.000+. Berikut distribusi penghasilan bulanan dari yang baru memulai hingga top analis yang menghasilkan ratusan juta per bulan.</p>
+<table class="score-table" style="max-width:600px;margin-bottom:24px">
+<thead><tr><th style="width:50%">Level</th><th style="width:50%">Keterangan</th></tr></thead>
+<tbody>
+<tr><td>🆕 Newbie</td><td>Baru mulai</td></tr>
+<tr><td>⭐ Rookie</td><td>Medal pertama</td></tr>
+<tr><td>🔥 Pro</td><td>Konsisten profit</td></tr>
+<tr><td>💎 Elite</td><td>Cashout TF Point bisa dilakukan</td></tr>
+<tr><td>👑 Master</td><td>Performa tinggi</td></tr>
+<tr style="background:var(--g1);border-color:var(--g4)"><td style="font-weight:700;color:var(--g8)">🏆 Legend</td><td style="font-weight:600;color:var(--g8)">Level tertinggi</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.82rem;color:var(--ink4);margin-bottom:24px">*20.000+ analis aktif — data dari Tito Hayunanda (Founder TF) via podcast</p>
+<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:16px">Harga Channel Berdasarkan Scoring</h3>
+<p style="font-size:0.88rem;color:var(--ink3);margin-bottom:20px;line-height:1.6">Mulai Juli 2026, harga channel ditentukan otomatis berdasarkan 7 faktor penilaian: Level, Kemitraan, Subscriber, Profit Factor, Monthly Loss Ratio, Profit Months, dan Recovery Factor.</p>
+<table class="score-table">
+<thead><tr><th>Skor</th><th>Range Harga Channel</th></tr></thead>
+<tbody>
+<tr><td>0 – 2</td><td>Rp77.000 – Rp200.000</td></tr>
+<tr><td>2,01 – 3</td><td>Rp177.000 – Rp300.000</td></tr>
+<tr><td>3,01 – 3,5</td><td>Rp277.000 – Rp400.000</td></tr>
+<tr><td>3,51 – 4</td><td>Rp377.000 – Rp500.000</td></tr>
+</tbody>
+</table>
+<div class="btns">
+<a href="https://link.tradersfamily.id/EgMFWkZUeVZORw" target="_blank" class="btn-p">Mulai Jadi Analis →</a>
+</div>
+</div>
+</section>
+
+<!-- TF APP -->
+<section id="tfapp" style="background:var(--bg2)">
+<div class="ctn">
+<div class="app-g">
+<div>
+<div class="lbl">Aplikasi TF</div>
+<h2 class="sec-t">Trading for Living,<br>Sekarang dalam Genggaman</h2>
+<p class="sec-d">Aplikasi Traders Family dirancang khusus agar Anda bisa belajar trading tanpa harus keluar modal namun tetap menghasilkan income.</p>
+<ul class="app-features">
+<li>Bangun mental & kontrol emosi trading</li>
+<li>Tingkatkan skill analisa teknikal & fundamental</li>
+<li>Belajar disiplin dengan trading plan</li>
+<li>Money management otomatis oleh sistem</li>
+<li>Probabilitas metode dihitung otomatis</li>
+<li>Hasilkan income tanpa modal</li>
+</ul>
+<div class="btns" style="justify-content:flex-start;margin-top:20px">
+<a href="https://link.tradersfamily.id/EgMFWkZUeVZORw" target="_blank" class="btn-p">Download TF App →</a>
+</div>
+</div>
+<div class="about-img">
+<img src="img/copy-signal.jpg" alt="TF Copy Signal" loading="lazy">
+</div>
+</div>
+</div>
+</section>
+
+<!-- LAYANAN -->
+<section id="layanan">
+<div class="ctn">
+<div class="lbl">Layanan</div>
+<h2 class="sec-t">Ekosistem Trading Terlengkap</h2>
+<p class="sec-d">Semua yang Anda butuhkan untuk memulai dan berkembang di dunia trading forex.</p>
+<div class="svc-g">
+<div class="svc"><div class="svc-i" style="background:var(--g1)">🛡️</div><h3>Client Protection</h3><p>Perlindungan 100% ganti rugi dana akibat kecurangan broker partner. Trading tanpa khawatir.</p></div>
+<div class="svc"><div class="svc-i" style="background:#dbeafe">📱</div><h3>TF Copy Signal</h3><p>Salin signal dari analis profesional langsung ke akun MT4 Anda secara otomatis.</p></div>
+<div class="svc"><div class="svc-i" style="background:#ffedd5">💡</div><h3>iSignal</h3><p>Akses signal trading dari analis berpengalaman dengan konsultasi langsung.</p></div>
+<div class="svc"><div class="svc-i" style="background:#ede9fe">🎓</div><h3>Exclusive Content</h3><p>Materi edukasi lengkap dari nol hingga mahir. Gratis untuk semua member.</p></div>
+<div class="svc"><div class="svc-i" style="background:#ccfbf1">🔧</div><h3>Trading Tools</h3><p>Backtest Tool, RR Calculator, Investment Calculator, Daily Outlook, Monthly Seasonality.</p></div>
+<div class="svc"><div class="svc-i" style="background:#f1f5f9">📊</div><h3>Analisa Market</h3><p>Rekomendasi pergerakan market harian menggunakan metode original Traders Family.</p></div>
+</div>
+</div>
+</section>
+
+<!-- PANDUAN -->
+<section id="panduan" style="background:var(--bg2)">
+<div class="ctn">
+<div class="lbl">Panduan</div>
+<h2 class="sec-t">Cara Memulai di Traders Family</h2>
+<p class="sec-d">Langkah demi langkah untuk memulai perjalanan Anda bersama TF.</p>
+
+<h3 style="font-size:1.05rem;font-weight:700;margin-bottom:16px">Langkah Daftar</h3>
+<div style="max-width:720px;margin-bottom:40px">
+<div class="panduan-steps">
+<div class="p-step"><div><h4>1. Download TF App</h4><p>Unduh aplikasi Traders Family dari Play Store atau App Store. Tersedia gratis untuk Android dan iOS.</p></div></div>
+<div class="p-step"><div><h4>2. Buat Akun</h4><p>Registrasi akun baru dengan data diri yang valid. Pilih email aktif untuk verifikasi.</p></div></div>
+<div class="p-step"><div><h4>3. Pilih Peran</h4><p>Tentukan apakah Anda ingin menjadi Investor atau Analis melalui menu Saya di aplikasi.</p></div></div>
+<div class="p-step"><div><h4>4. Verifikasi KYC</h4><p>Unggah foto KTP dan dokumen pendukung. Proses verifikasi biasanya selesai dalam 1x24 jam hari kerja.</p></div></div>
+<div class="p-step"><div><h4>5. Buka Akun Trading</h4><p>Untuk Investor: buka akun di broker partner (MRG Mega Berjangka) langsung dari aplikasi untuk memulai trading.</p></div></div>
+<div class="p-step"><div><h4>6. Mulai Aktivitas</h4><p>Gunakan edukasi, tools, dan signal yang tersedia. Jika jadi Analis, mulai buat channel dan post signal Anda.</p></div></div>
+</div>
+</div>
+
+<h3 style="font-size:1.05rem;font-weight:700;margin-bottom:16px">Fitur Unggulan TF App</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;max-width:900px;margin-bottom:16px">
+<div style="background:var(--bg);border:1px solid var(--ink6);border-radius:12px;padding:20px">
+<h4 style="font-size:0.95rem;font-weight:700;margin-bottom:8px">iSignal</h4>
+<p style="font-size:0.85rem;color:var(--ink2);line-height:1.6">Akses signal trading dari analis berpengalaman dengan konsultasi langsung. Cocok untuk yang butuh bimbingan personal.</p>
+</div>
+<div style="background:var(--bg);border:1px solid var(--ink6);border-radius:12px;padding:20px">
+<h4 style="font-size:0.95rem;font-weight:700;margin-bottom:8px">TF Copy Signal</h4>
+<p style="font-size:0.85rem;color:var(--ink2);line-height:1.6">Salin signal dari analis profesional langsung ke akun MT4 Anda secara otomatis. Pilih channel yang sesuai strategi Anda.</p>
+</div>
+<div style="background:var(--bg);border:1px solid var(--ink6);border-radius:12px;padding:20px">
+<h4 style="font-size:0.95rem;font-weight:700;margin-bottom:8px">Exclusive Content</h4>
+<p style="font-size:0.85rem;color:var(--ink2);line-height:1.6">Materi edukasi lengkap dari nol hingga mahir. Tersedia gratis untuk semua member Traders Family.</p>
+</div>
+<div style="background:var(--bg);border:1px solid var(--ink6);border-radius:12px;padding:20px">
+<h4 style="font-size:0.95rem;font-weight:700;margin-bottom:8px">Backtest Tool</h4>
+<p style="font-size:0.85rem;color:var(--ink2);line-height:1.6">Alat bantu untuk mengukur probabilitas dari sebuah metode di kondisi market yang sudah terjadi. Buktikan seberapa profit metode Anda.</p>
+</div>
+<div style="background:var(--bg);border:1px solid var(--ink6);border-radius:12px;padding:20px">
+<h4 style="font-size:0.95rem;font-weight:700;margin-bottom:8px">Daily Outlook</h4>
+<p style="font-size:0.85rem;color:var(--ink2);line-height:1.6">Rekomendasi pergerakan market potensial yang dirilis setiap hari oleh tim Traders Family. Cocok untuk intraday traders.</p>
+</div>
+<div style="background:var(--bg);border:1px solid var(--ink6);border-radius:12px;padding:20px">
+<h4 style="font-size:0.95rem;font-weight:700;margin-bottom:8px">Monthly Seasonality</h4>
+<p style="font-size:0.85rem;color:var(--ink2);line-height:1.6">Kecenderungan pola pergerakan harga di pasar yang berulang pada bulan atau periode waktu tertentu setiap tahunnya.</p>
+</div>
+<div style="background:var(--bg);border:1px solid var(--ink6);border-radius:12px;padding:20px">
+<h4 style="font-size:0.95rem;font-weight:700;margin-bottom:8px">Risk &amp; Reward Calculator</h4>
+<p style="font-size:0.85rem;color:var(--ink2);line-height:1.6">Hitung risiko sesuai metode dan trading plan Anda. Sesuaikan besaran lot berdasarkan modal dan persentase risiko.</p>
+</div>
+<div style="background:var(--bg);border:1px solid var(--ink6);border-radius:12px;padding:20px">
+<h4 style="font-size:0.95rem;font-weight:700;margin-bottom:8px">Investment Calculator</h4>
+<p style="font-size:0.85rem;color:var(--ink2);line-height:1.6">Simulator untuk memproyeksikan pertumbuhan modal dalam jangka panjang menggunakan compounding interest.</p>
+</div>
+</div>
+</div>
+
+<h3 style="font-size:1.05rem;font-weight:700;margin-bottom:16px">Tips untuk Pemula</h3>
+<div style="max-width:720px;margin-bottom:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:1.2rem;flex-shrink:0">&#10003;</span><p style="font-size:0.88rem;color:var(--ink2);line-height:1.6"><strong>Mulai Tanpa Modal</strong> &#8212; Analis bisa langsung membuat channel dan memposting signal menggunakan akun simulasi. Hasil trading bisa dikonversi menjadi TF Point dan ditukarkan ke cash.</p></div>
+<div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:1.2rem;flex-shrink:0">&#10003;</span><p style="font-size:0.88rem;color:var(--ink2);line-height:1.6"><strong>Gunakan Backtest Tool</strong> &#8212; Buktikan metode trading Anda dengan data historis sebelum menggunakan di market real.</p></div>
+<div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:1.2rem;flex-shrink:0">&#10003;</span><p style="font-size:0.88rem;color:var(--ink2);line-height:1.6"><strong>Baca Daily Outlook setiap hari</strong> &#8212; Biasakan membaca analisa market harian untuk melatih insting trading Anda.</p></div>
+
+<div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:1.2rem;flex-shrink:0">&#10003;</span><p style="font-size:0.88rem;color:var(--ink2);line-height:1.6"><strong>Ikuti Exclusive Content</strong> &#8212; Materi edukasi gratis dari TF dirancang sistematis dari pemula sampai mahir.</p></div>
+</div>
+</div>
+
+<div style="margin-top:24px">
+<a href="https://account.tradersfamily.id/aff/412374/" target="_blank" class="btn-p">Buka Akun Sekarang &#8594;</a>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="ctn">
+<div class="lbl">FAQ</div>
+<h2 class="sec-t">Pertanyaan Umum</h2>
+<div class="faq-l">
+<div class="faq-i"><button class="faq-q">Traders Family itu broker ya?<span class="ar">+</span></button><div class="faq-a"><p>Bukan. Traders Family adalah perusahaan konsultan forex yang berlisensi BAPPEBTI sebagai Penasihat Berjangka. TF tidak menampung dana klien — fokusnya adalah edukasi, bimbingan, dan perlindungan trader.</p></div></div>
+<div class="faq-i"><button class="faq-q">Bagaimana cara jadi Analis dan dapat income?<span class="ar">+</span></button><div class="faq-a"><p>Download TF App, buat akun, pilih peran Analis, buat channel, lalu post signal. Raih income dari subscriber dan TF Point yang bisa ditukar ke cash. Minimum cashout di level Elite.</p></div></div>
+<div class="faq-i"><button class="faq-q">Apakah perlu modal untuk jadi Analis?<span class="ar">+</span></button><div class="faq-a"><p>Tidak. Program "Belajar Tapi Dibayar" memungkinkan Anda trading tanpa modal. Income berasal dari TF Point dan subscriber channel Anda.</p></div></div>
+<div class="faq-i"><button class="faq-q">Bagaimana Client Protection bekerja?<span class="ar">+</span></button><div class="faq-a"><p>Jika Anda mengalami kerugian akibat kecurangan broker partner, TF menjamin penggantian 100% dana Anda. Semua broker partner telah melalui pengujian ketat selama 3 bulan.</p></div></div>
+<div class="faq-i"><button class="faq-q">Berapa harga langganan channel analis?<span class="ar">+</span></button><div class="faq-a"><p>Harga ditentukan oleh sistem scoring berdasarkan performa analis. Mulai dari Rp77.000 hingga Rp500.000 per bulan. Channel baru di bawah 6 bulan hanya bisa gratis.</p></div></div>
+<div class="faq-i"><button class="faq-q">Broker partner TF apa saja?<span class="ar">+</span></button><div class="faq-a"><p>Saat ini broker partner utama adalah MRG Mega Berjangka. Semua broker telah terdaftar di BAPPEBTI.</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2 class="sec-t">Siap Memulai Perjalanan<br>Trading Anda?</h2>
+<p class="sec-d">Bergabung dengan ribuan trader Indonesia yang sudah merasakan manfaatnya.</p>
+<div class="btns">
+<a href="https://account.tradersfamily.id/aff/412374/" target="_blank" class="btn-w">Daftar Gratis Sekarang →</a>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="ft-in">
+<div class="nav-logo"><img src="img/tfnotes-logo.jpg" alt="TF Notes" height="72" style="object-fit:contain;max-width:none"></div>
+<div class="ft-links">
+<a href="#tentang">Tentang Traders Family</a>
+<a href="#role">3 Role</a>
+<a href="#analis">Analis</a>
+<a href="#tfapp">TF App</a>
+<a href="#panduan">Panduan</a>
+<a href="#faq">FAQ</a>
+<a href="https://tradersfamily.id/contact/" target="_blank">Kontak</a>
+</div>
+<p>&copy; 2026 TF Notes. Partner resmi PT Traders Family Indonesia.</p>
+</div>
+<div class="discl">Disclaimer: Trading forex melibatkan risiko tinggi dan tidak cocok untuk semua investor. Traders Family adalah perusahaan konsultan, bukan broker. Pastikan Anda memahami risiko sebelum memulai trading. Pendapatan masa lalu tidak menjamin hasil di masa depan.</div>
+</footer>
+
+<!-- POPUP BANNER -->
+<div class="popup-ban" id="popupBan">
+<button class="popup-x" id="popupX" aria-label="Tutup">✕</button>
+<div class="popup-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEH0lEQVR4nOWaS2wbRRjH/zP78COO7djESZpXEyClCVQQKWpFEVCphxZQ1FORQDwESDyKEBx649IDh16gqlTuSHCooBVClRAHWjg0FVVVqqSkCaSlkEQkJHadxI7X9u4OmhEqD2ln/ULJlJ8Plrzf7H7/3e+b75v1EMZYwnXdtxljhwAkoAYZQsgJSukxnTsP4DCAINQhwX12XRfEtu20Qnf+32S4AAaFoVAcCsWhUBwKxaFQHArF0b0OuIxhfO0mJtdmwbBxM+32SDcejPaBElKlALj4fOE7HP/ljBCzERBCcKhnPx5o7gElenUCuM9Ft4ycbcHdoCdAQIQP7E7OAQrFoVAcCsWhUBzd8wgBTKojpAWqqgN8yrXcUt2zj0YoDKrBoDp3pXoBGiieSo2gN5SqWAB3/uv0OE4tjFU98RpEQ2cwicFIF/rCbegItCCuN+GhWD80onmO813QVOPI5ZXreHH8OK7l5ioeoxGKh+Pb8HL3XuyKb0PCbEZYC8Akmihk/FNbCP2JfPhfLJdWcfT6aUzl5iuyD1IDw7G7cbj/APa1DosnUAu+AiqBh9hHc+fw5dLlisKtK5jEGz378EznY+gMJnzv8n8u4Mrqzzh64zQKFSQv72uODb4iwsag9V++7jPwXunIjyeRKed8bYci3fhw6DXsahmo6643rA7wcDmXnsBYdsrX9t5wB04MvdpQ5+sWkHeK+GLxIrLlvNQuaTTj/cGXsDtxX0Odr1vAvJXG2cyEtN3WiYYXuvbg8cT9FTnPqlw+1ZUDZ5cnMGfxF3ve8KL0fOcehDRTWgBvFhZxMfuTmI5jRhOGY/1iNUbrrQNeOMzFpwvnxbeMZ7c8iu2RLqnNV8vf493pT3CjsIiSW4ZBdCTNZrzV+yRe790vWpqGC+Dhc2llRmqTMqOiwvJq68WFW1N47soHyNrrt38rwkauYOHIzElEjbB4gl7nqDkHLmSnUXDk8/5o2060B+Kex3OOhfdmPvuH839n1S7g4/lvkS6teZ6jJgE8yXi8ypKNd5KjqRFp4s4WljGZn5Ve64e1X7FUWmmsAIc5mPbpedrNFgw0bZHaWG4Ztk8OFZmNMrMbK4CHzmIp69vvRPSQ1KY9EEdCj0htRFttRBorYN0pYt0n/lvNqOg4ZbSZMRzs2O0ZZDxx9yZ3IGXGGjsL2cxBEzURN8KeNqlAFDqVt8iUULzTN4rJ3CzO/H4Jece6nVcBqmNnfABvbn1CrA+8qOkfGh5C529dQ962PG26Q3dhR3SrqMR+ZMo5nPptDN9krmKptIq40YSR2D14uuMR9IRapWM3zV9MDnNFbyUKGdUR0YLS+rHpBPxvX6tQKA6F4lAoDsUdICADdclQvuuDEOJdkTYphBCL+67zLSt81wcApbbbABDbbf4Alttwps2Mj8EAAAAASUVORK5CYII=" alt="TF" width="28" height="28" style="border-radius:4px"></div>
+<div class="popup-txt">Update atau download aplikasi Traders Family untuk pengalaman terbaik</div>
+<button class="popup-dl" onclick="window.open('https://link.tradersfamily.id/EgMFWkZUeVZORw','_blank')">Download</button>
+</div>
+
+<script>
+document.getElementById('ham').onclick=()=>document.getElementById('navL').classList.toggle('open');
+document.querySelectorAll('.nav-links a').forEach(a=>a.onclick=()=>document.getElementById('navL').classList.remove('open'));
+window.onscroll=()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>10)};
+document.querySelectorAll('.faq-q').forEach(b=>b.onclick=()=>{const i=b.parentElement,was=i.classList.contains('op');document.querySelectorAll('.faq-i').forEach(x=>x.classList.remove('op'));if(!was)i.classList.add('op')});
+setTimeout(()=>{document.getElementById('popupBan').classList.add('show')},2000);
+document.getElementById('popupX').onclick=()=>document.getElementById('popupBan').classList.add('hidden');
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.onclick=e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})});
+</script>
